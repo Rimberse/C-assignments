@@ -1,0 +1,3 @@
+C:/Users/kerim/CLionProjects/SE-TP1/cmake-build-debug/CMakeFiles/SE_TP1.dir
+C:/Users/kerim/CLionProjects/SE-TP1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/kerim/CLionProjects/SE-TP1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
