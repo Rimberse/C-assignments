@@ -1,5 +1,6 @@
 #include "t_matrice.h"
 #include "../GestionTableau2D/2DR.h"
+#include "../GestionEcritureLecture/MatrixRW.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -50,4 +51,40 @@ t_matrice* multiplyMatrix(t_matrice matrix1, t_matrice matrix2) {
 
 void deAllocateMatrix(t_matrice matrix) {
     deAllocate(matrix.coefficients);
+}
+
+t_matrice* atomatrice(char filename[]) {
+    char *m = readFile(filename);
+
+    char *ptr;
+    ptr = m;
+    int rows = atoi(ptr);
+    ptr++;
+    ptr++;
+    int columns = atoi(ptr);
+    ptr++;
+
+    t_matrice* matrix = allocateMatrix(rows, columns);
+
+    int i = rows;
+    int j = columns;
+    while(*ptr != '\0') {
+        int value = atoi(ptr);
+        ptr++;
+        ptr++;
+
+        if (columns == 0) {
+            printf("\n");
+            columns = j;
+            rows--;
+        }
+
+        if (columns > 0 && rows > 0) {
+            matrix -> coefficients[i - rows][j - columns] = value;
+        }
+
+        columns--;
+    }
+
+    return matrix;
 }

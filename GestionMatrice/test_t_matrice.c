@@ -7,7 +7,7 @@
 #include <stdlib.h>
 
 void testMatrix() {
-    t_matrice* matrix1 = allocateMatrix(2, 2);
+    /*t_matrice* matrix1 = allocateMatrix(2, 2);
     t_matrice* matrix2 = allocateMatrix(2, 2);
 
     fillCoefficients(*matrix1);
@@ -20,5 +20,8 @@ void testMatrix() {
     t_matrice* matrix = multiplyMatrix(*matrix1, *matrix2);
     displayMatrix(*matrix);
     deAllocateMatrix(*matrix1);
-    deAllocateMatrix(*matrix2);
+    deAllocateMatrix(*matrix2);*/
+
+    t_matrice* readMatrix = atomatrice("coefficients.txt");
+    displayMatrix(*readMatrix);
 }

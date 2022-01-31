@@ -5,8 +5,8 @@
 
 int main() {
 //    test();
-//    testMatrix();
-    testMatrixRW();
+    testMatrix();
+//    testMatrixRW();
 
     return 0;
 }
